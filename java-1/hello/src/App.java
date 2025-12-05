@@ -50,7 +50,7 @@ public class App
         System.out.println("Digite um segundo número que seja maior que o primeiro: ");
         int number2 = scanner.nextInt();        
             
-         while (number2 < number1 || number2 == number1)
+        while (number2 < number1 || number2 == number1)
             {
                 System.out.println("O segundo número que você digitou não é maior que o primeiro! Digite novamente o segundo, lembre-se tem que ser maior que o primeiro!");
                 number2 = scanner.nextInt();
@@ -81,6 +81,19 @@ public class App
                 ;
                 break;
             }
+
+        System.out.println("Digite um número:");
+        int number = scanner.nextInt();
+        System.out.println("Digite outro número:");
+        int numberTeste = scanner.nextInt();
+        while (numberTeste < number || numberTeste%2 !=0) 
+            {
+                System.out.println("O segundo número que você digitou é menor que o primeiro que você digitou. Digite outro:");
+               numberTeste = scanner.nextInt();
+            }
+        
+            System.out.println("Esse número é divisor do " + number);
+        
         scanner.close(); 
     }
 }
